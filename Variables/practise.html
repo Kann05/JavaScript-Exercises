@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="script.js">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <button onclick=" console.log(`Cart Quantity = ${cartquantity}`)">Show Quantity</button>
+    <button onclick=" console.log(`Item added to cart, Your Quantity is: ${++ cartquantity}`)">Add to Cart</button>
+    <button onclick=" 
+    cartquantity += 2;
+    console.log(`2 Items added to card, Your Quantity is: ${cartquantity}`)
+    ">+2</button>
+    <button onclick="
+    cartquantity += 3;
+    console.log(`3 Items added to card, Your Quantity is: ${cartquantity}`)
+    ">+3</button>
+    <button onclick="
+    cartquantity = 0
+    console.log(`Cart was reset. \nCart Quantity is: ${cartquantity}`)
+    ">Reset Card</button>
+</body>
+</html>
