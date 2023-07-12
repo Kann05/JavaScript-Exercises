@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+
+    ComputerMove('Rock');
+    Result();
+
+    ">Rock</button>
+
+    <button onclick="
+    ComputerMove('Paper');
+    Result();
+    
+    ">Paper</button>
+
+    <button onclick="
+    
+    ComputerMove('Scissors');
+    Result();
+    
+    ">Scissors</button>
+
+    <button onclick="Reset();">Reset Stats</button>
+    
+    <script>
+
+        let counter = {
+            winCounter: 0,
+            loseCounter: 0,
+            drawCounter: 0
+        };
+
+        let computerRepsonse = '';
+        let result = '';
+        let playerMovement;
+
+        function ComputerMove(playerMove){
+
+            const randomNumber = Math.random();
+
+            if (randomNumber >= 0 && randomNumber < 1/3) {
+
+                computerRepsonse = 'Rock';
+                playerMovement = playerMove;
+
+            }
+            else if (randomNumber > 1/3 && randomNumber < 2/3){
+                
+                computerRepsonse = 'Paper'
+                playerMovement = playerMove;
+            }
+            else if (randomNumber > 2/3 && randomNumber < 1){
+
+                computerRepsonse = 'Scissors';
+                playerMovement = playerMove;
+            }
+            
+        }
+
+        function Result() {
+            if (playerMovement === 'Scissors') {
+          if (computerRepsonse === 'Rock') {
+            result = 'You lose.';
+            counter.loseCounter ++;
+          } else if (computerRepsonse === 'Paper') {
+            result = 'You win.';
+            counter.winCounter ++;
+          } else if (computerRepsonse === 'Scissors') {
+            result = 'Tie.';
+            counter.drawCounter ++;
+          }
+
+        } else if (playerMovement === 'Paper') {
+          if (computerRepsonse === 'Rock') {
+            result = 'You win.';
+            counter.winCounter ++;
+          } else if (computerRepsonse === 'Paper') {
+            result = 'Tie.';
+            counter.drawCounter ++;
+          } else if (computerRepsonse === 'Scissors') {
+            result = 'You lose.';
+            counter.loseCounter ++;
+          }
+          
+        } else if (playerMovement === 'Rock') {
+          if (computerRepsonse === 'Rock') {
+            result = 'Tie.';
+            counter.drawCounter ++;
+          } else if (computerRepsonse === 'Paper') {
+            result = 'You lose.';
+            counter.loseCounter ++;
+          } else if (computerRepsonse === 'Scissors') {
+            result = 'You win.';
+            counter.winCounter ++;
+          }
+        }
+
+        alert(`You picked : ${playerMovement} | Computer Picked : ${computerRepsonse} | Result : ${result} \n You have ${counter.winCounter} wins ${counter.loseCounter} losses and ${counter.drawCounter} draws`);
+        
+
+        }
+        
+        function Reset() {
+            counter.winCounter = 0;
+            counter.drawCounter = 0;
+            counter.loseCounter = 0;
+        }
+
+        
+    </script>
+</body>
+</html>
