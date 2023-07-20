@@ -1,0 +1,15 @@
+.js-subscribeButton {
+   margin-top: 30px;
+   background-color: black;
+   color: white;
+   font-weight: bold;
+   border: none;
+   border-color: black;
+   border-radius: 20px;
+   border-style: solid;
+   padding-top: 8px;
+   padding-bottom: 8px;
+   padding-right: 12px;
+   padding-left: 12px;
+   cursor: pointer;
+}

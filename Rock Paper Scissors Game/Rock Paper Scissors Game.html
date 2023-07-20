@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="myscripts.js"></script>
+</head>
+<body>
+    <p>Rock Paper Scissors</p>
+    <button onclick="
+
+    ComputerMove('Rock');
+    Result();
+
+    ">Rock</button>
+
+    <button onclick="
+    ComputerMove('Paper');
+    Result();
+    
+    ">Paper</button>
+
+    <button onclick="
+    
+    ComputerMove('Scissors');
+    Result();
+    
+    ">Scissors</button>
+
+
+    <h3>Result: <span id="result"></span></h3>
+        <h5><span id="mychoice">Your Move: </span>
+        <br/>
+        <span id="computerMove">Computer Move: </span>
+        <br/>
+        <br/>
+        <span id="js-winCounter">Wins: 0 |</span> <span id="js-loseCounter">Loss: 0 |</span> <span id="js-drawCounter">Draws: 0</span></h5>
+
+    <button onclick="Reset();">Reset Stats</button>
+</body>
+</html>
