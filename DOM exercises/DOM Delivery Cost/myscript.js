@@ -8,3 +8,12 @@ function CalculateTotal() {
 
     document.querySelector('#amount').innerHTML = `Price: ${cost}$`;
 }
+
+function CalculateWhenEnter()
+{
+    let calculate = event.key;
+
+    if (calculate === 'Enter'){
+        CalculateTotal();
+    }
+}
