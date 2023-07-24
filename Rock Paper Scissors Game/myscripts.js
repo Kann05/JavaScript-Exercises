@@ -40,37 +40,37 @@ function ComputerMove(playerMove){
 function Result() {
     if (playerMovement === 'Scissors') {
   if (computerRepsonse === 'Rock') {
-    result = 'You lose.';
+    result = 'You lose';
     counter.loseCounter ++;
   } else if (computerRepsonse === 'Paper') {
-    result = 'You win.';
+    result = 'You win';
     counter.winCounter ++;
   } else if (computerRepsonse === 'Scissors') {
-    result = 'Tie.';
+    result = 'Tie';
     counter.drawCounter ++;
   }
 
 } else if (playerMovement === 'Paper') {
   if (computerRepsonse === 'Rock') {
-    result = 'You win.';
+    result = 'You win';
     counter.winCounter ++;
   } else if (computerRepsonse === 'Paper') {
-    result = 'Tie.';
+    result = 'Tie';
     counter.drawCounter ++;
   } else if (computerRepsonse === 'Scissors') {
-    result = 'You lose.';
+    result = 'You lose';
     counter.loseCounter ++;
   }
   
 } else if (playerMovement === 'Rock') {
   if (computerRepsonse === 'Rock') {
-    result = 'Tie.';
+    result = 'Tie';
     counter.drawCounter ++;
   } else if (computerRepsonse === 'Paper') {
-    result = 'You lose.';
+    result = 'You lose';
     counter.loseCounter ++;
   } else if (computerRepsonse === 'Scissors') {
-    result = 'You win.';
+    result = 'You win';
     counter.winCounter ++;
   }
 }
@@ -81,11 +81,12 @@ function Result() {
 
   const jsMyChoice = document.getElementById('mychoice');
 
-  jsMyChoice.innerText = `Your move: ${playerMovement}`;
+  jsMyChoice.innerHTML = `You
+  <img src="Images/${playerMovement}-emoji.png" class="move-icon">`;
 
   const jsComputerMove = document.getElementById('computerMove');
 
-  jsComputerMove.innerText = `Computer move: ${computerRepsonse}`;
+  jsComputerMove.innerHTML = `Computer <img src="Images/${computerRepsonse}-emoji.png" class="move-icon">`;
 
   const jsWinCounter = document.getElementById('js-winCounter');
 

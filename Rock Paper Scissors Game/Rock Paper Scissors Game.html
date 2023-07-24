@@ -4,39 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="myscripts.js"></script>
 </head>
 <body>
-    <p>Rock Paper Scissors</p>
-    <button onclick="
+    <div class="title">
+        <p class="Welcome">Welcome to</p>
+        <p class="rockpaperscissors">Rock Paper Scissors</p>
+        <p class="game">Game</p>
+    </div>
 
-    ComputerMove('Rock');
-    Result();
+        <button  class="move-button" onclick = "ComputerMove('Rock');
+        Result();
+        "><img class="move-icon" src="Images/rock-emoji.png"></button>
 
-    ">Rock</button>
+        <button class="move-button" onclick="ComputerMove('Paper');
+        Result();
+        "><img class="move-icon" src="Images/paper-emoji.png"></button>
 
-    <button onclick="
-    ComputerMove('Paper');
-    Result();
-    
-    ">Paper</button>
-
-    <button onclick="
-    
-    ComputerMove('Scissors');
-    Result();
-    
-    ">Scissors</button>
+        <button class="move-button" onclick="ComputerMove('Scissors');
+        Result();
+        "><img class="move-icon" src="Images/scissors-emoji.png"></button>
 
 
     <h3>Result: <span id="result"></span></h3>
-        <h5><span id="mychoice">Your Move: </span>
-        <br/>
-        <span id="computerMove">Computer Move: </span>
-        <br/>
-        <br/>
-        <span id="js-winCounter">Wins: 0 |</span> <span id="js-loseCounter">Loss: 0 |</span> <span id="js-drawCounter">Draws: 0</span></h5>
+    <div class="choices">
+        <span id="mychoice">You </span>
+        <span id="computerMove">Computer </span>
+    </div>
+    <div class="stats">
+        <span id="js-winCounter">Wins: 0 |</span> <span id="js-loseCounter">Loss: 0 |</span> <span id="js-drawCounter">Draws: 0</span>
+    </div>
 
-    <button onclick="Reset();">Reset Stats</button>
+    <button class="resetButton" onclick="Reset();">Reset Stats</button>
 </body>
 </html>
