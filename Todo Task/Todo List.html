@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo List</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <script src="myscripts.js"></script>
-</head>
-<body>
-    <div class="center">
-        <p>Todo List</p>
-        <input onkeydown="OnKeyDown_takeTodoTask();" class="todo-name" id="todo-list" placeholder="Todo name">
-        <input class="todo-name" id="take-date" type="date">
-        <button onclick="takeTodoTask();" class="add-button" id="add-button">Add</button>
-        <div class ="todo-row" id="tasks"></div>
+  </head>
+  <body>
+    <div style="text-align: center;">
+      <p >Todo List</p>
+        <input
+          onkeydown="OnKeyDown_takeTodoTask();"
+          class="todo-name"
+          id="todo-list"
+          placeholder="Todo name"
+        />
+        <input class="todo-name" id="take-date" type="date" />
+        <button onclick="takeTodoTask();" class="add-button" id="add-button">
+          Add
+        </button>
     </div>
-</body>
+    <div style="max-width: 840px; margin: auto;" id="tasks"></div>
+  </body>
 </html>

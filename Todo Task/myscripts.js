@@ -1,24 +1,23 @@
 let arrayTodoSave = [];
 let arrayDateSave = [];
 
-window.addEventListener('load', function() {
-    let savedTasks = localStorage.getItem('todoTasks');
-    if (savedTasks) {
-      var parsedTasks = JSON.parse(savedTasks);
-      arrayTodoSave = parsedTasks.todos;
-      arrayDateSave = parsedTasks.dates;
-      DisplayToDoTask();
-    }
-  });
+window.addEventListener("load", function () {
+  let savedTasks = localStorage.getItem("todoTasks");
+  if (savedTasks) {
+    var parsedTasks = JSON.parse(savedTasks);
+    arrayTodoSave = parsedTasks.todos;
+    arrayDateSave = parsedTasks.dates;
+    DisplayToDoTask();
+  }
+});
 
 function DisplayToDoTask() {
-  let toDoHTML = '';
+  let toDoHTML = "";
 
   for (let index = 0; index < arrayTodoSave.length; index++) {
     const todoTask = arrayTodoSave[index];
     const todoDate = arrayDateSave[index];
-    let html = 
-    `<p>
+    let html = `<p style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: 5px; margin-right:auto; margin-top: 50px;">
         Task ${index + 1}:
         <span class="Todo-name">${todoTask}</span>
         <span class="Todo-date">${todoDate}</span>
@@ -27,7 +26,7 @@ function DisplayToDoTask() {
     toDoHTML += html;
   }
 
-  let DisplayTask = document.querySelector('#tasks').innerHTML = toDoHTML;
+  let DisplayTask = (document.querySelector("#tasks").innerHTML = toDoHTML);
 }
 
 function RemoveTask(index) {
@@ -38,17 +37,17 @@ function RemoveTask(index) {
 }
 
 function takeTodoTask() {
-  const connectTodoTask = document.querySelector('#todo-list');
+  const connectTodoTask = document.querySelector("#todo-list");
   let takeTodoTask = connectTodoTask.value;
 
-  const connectTodoDate = document.querySelector('#take-date');
+  const connectTodoDate = document.querySelector("#take-date");
   let takeTodoDate = connectTodoDate.value;
 
   arrayTodoSave.push(takeTodoTask);
   arrayDateSave.push(takeTodoDate);
-  
-  connectTodoTask.value = '';
-  connectTodoDate.value = '';
+
+  connectTodoTask.value = "";
+  connectTodoDate.value = "";
 
   DisplayToDoTask();
   saveToLocalStorage();
@@ -60,12 +59,12 @@ function saveToLocalStorage() {
     dates: arrayDateSave,
   };
 
-  localStorage.setItem('todoTasks', JSON.stringify(tasksToSave));
+  localStorage.setItem("todoTasks", JSON.stringify(tasksToSave));
 }
 
 function OnKeyDown_takeTodoTask() {
   let taketask = event.key;
-  if (taketask === 'Enter') {
+  if (taketask === "Enter") {
     takeTodoTask();
   }
 }
