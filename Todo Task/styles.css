@@ -32,3 +32,22 @@ p {
     width: 50%;
     margin: auto;
 }
+.select {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.inprogress {
+    background-color: #3498DB;
+}
+.pending {
+    background-color: #FFA500;
+}
+select {
+    background-color: white;
+    color: black;
+}
+.done {
+    background-color: #008000;
+}
+  
+
