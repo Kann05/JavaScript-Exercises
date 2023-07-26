@@ -47,24 +47,28 @@ function ChangeColors() {
       event.target.style.color = "white";
       event.target.style.border = "none";
       event.target.style.fontWeight = "bold";
+      event.target.style.textAlign = "center";
     }
     if (selectedValue === "Pending") {
       event.target.style.backgroundColor = "#FFA500";
       event.target.style.color = "white";
       event.target.style.border = "none";
       event.target.style.fontWeight = "bold";
+      event.target.style.textAlign = "center";
     }
     if (selectedValue === "select") {
       event.target.style.backgroundColor = "white";
       event.target.style.color = "black";
       event.target.style.border = "none";
       event.target.style.fontWeight = "bold";
+      event.target.style.textAlign = "center";
     }
     if (selectedValue === "done") {
       event.target.style.backgroundColor = "#008000";
       event.target.style.color = "white";
       event.target.style.border = "none";
       event.target.style.fontWeight = "bold";
+      event.target.style.textAlign = "center";
     }
   });
 }
