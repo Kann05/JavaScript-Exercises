@@ -7,12 +7,12 @@ window.addEventListener("load", function () {
     var parsedTasks = JSON.parse(savedTasks);
     arrayTodoSave = parsedTasks.todos;
     arrayDateSave = parsedTasks.dates;
-    DisplayToDoTask();
+    displayTodoTask();
   }
-  ChangeColors();
+  changeColors();
 });
 
-function DisplayToDoTask() {
+function displayTodoTask() {
   let toDoHTML = "";
 
   for (let index = 0; index < arrayTodoSave.length; index++) {
@@ -28,7 +28,7 @@ function DisplayToDoTask() {
           <option class="inprogress" value="In Progress">In Progress</option>
           <option class="pending" value="Pending">Pending</option>
         </select>
-        <button onclick="RemoveTask(${index})" class="delete-button">Delete</button>
+        <button onclick="removeTask(${index})" class="delete-button">Delete</button>
     </p>`;
     toDoHTML += html;
   }
@@ -36,7 +36,7 @@ function DisplayToDoTask() {
   let DisplayTask = (document.querySelector("#tasks").innerHTML = toDoHTML);
 }
 
-function ChangeColors() {
+function changeColors() {
   let tasksContainer = document.querySelector("#tasks");
 
   tasksContainer.addEventListener("change", function (event) {
@@ -73,10 +73,10 @@ function ChangeColors() {
   });
 }
 
-function RemoveTask(index) {
+function removeTask(index) {
   arrayTodoSave.splice(index, 1);
   arrayDateSave.splice(index, 1);
-  DisplayToDoTask();
+  displayTodoTask();
   saveToLocalStorage();
 }
 
@@ -93,7 +93,7 @@ function takeTodoTask() {
   connectTodoTask.value = "";
   connectTodoDate.value = "";
 
-  DisplayToDoTask();
+  displayTodoTask();
   saveToLocalStorage();
 }
 
