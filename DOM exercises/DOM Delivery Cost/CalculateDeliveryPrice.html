@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="myscript.js"></script>
 </head>
 <body>
     <div style="margin-top: 100px">
@@ -15,8 +14,10 @@
         Delivery costs 10$
         <br/>
         <br/>
-        <input  id="js-cost-order" onkeydown="CalculateWhenEnter()" placeholder="Cost of Order"> <button onclick="CalculateTotal()">Calculate</button>
+        <!-- Input 'Enter' call function ------   button pressed call function                              -->
+        <input  id="js-cost-order" placeholder="Cost of Order"> <button id="js-call-order">Calculate</button>
         <h2 id="amount">Price: 0$</h2>
     </div>
+    <script src="myscript.js"></script>
 </body>
 </html>
