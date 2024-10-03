@@ -1,0 +1,13 @@
+.termsofserviceandprivacypolice {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 60%;
+    margin: auto;
+    margin-left: 100px;
+    color: white;
+    margin-bottom: 100px;
+}
+.privacy {
+    margin-top: 100px;
+}

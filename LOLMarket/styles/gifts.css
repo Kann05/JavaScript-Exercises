@@ -1,0 +1,97 @@
+.poster {
+    background-image: linear-gradient(rgba(7, 23, 47, 0.867) 0%, rgba(7, 23, 47, 0.733) 20%, transparent 50%, rgba(7, 23, 47, 0.733) 67%, rgba(7, 23, 47, 0.867) 100%), url(../Images/riven.jpg);
+}
+.frame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    margin: auto;
+    gap: 30px;
+}
+.inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: .5rem;
+    background-color: rgb(14 35 59);
+    padding: 2px;
+    margin-bottom: 50px;
+    transition: transform 0.35s ease-in-out;
+    box-shadow: 3px 15px 5px rgb(6, 22, 43);
+}
+.inside:hover {
+    transform: scale(1.05);
+    transition: all 0.35s ease-in-out;
+}
+
+.gift {
+    height: 100px; 
+    border-radius: .5rem;
+    margin-top: 20px;
+}
+.description {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-top: 30px;
+}
+.typeaccount {
+    color: white;
+    font-weight: bold;
+    font-weight: 1000;
+    font-size: 15px;
+    margin-top: 25px;
+    background-color: rgb(7 23 47);
+    border: none;
+    border-radius: .5rem;
+    padding: 10px 60px 10px 60px;
+}
+
+.price {
+    align-self: flex-start;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.price-tag{
+    height: 20px;
+    display: flex;
+}
+.pricelist {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-weight: 1000;
+    
+    background-color: transparent;
+    border: none;
+  
+    
+}
+.add-item-cart {
+    color: white;
+    font-weight: bold;
+    font-weight: 1000;
+    background-color: rgb(7 23 47);
+    border: none;
+    border-radius: .5rem;
+    padding: 10px 50px 10px 50px;
+    background: rgb(88, 113, 255);
+    margin-bottom: 25px;
+    transition: 1s ease;
+    cursor: pointer;
+}
+.add-item-cart:hover {
+    background: rgb(178, 110, 255)
+    
+}

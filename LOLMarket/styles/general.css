@@ -1,0 +1,43 @@
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  body {
+    background-color: rgb(7 23 47);
+    font-family: Roboto, Arial;
+    margin: 0;
+    padding-top: 80px;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+   -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+html {
+  scroll-behavior: smooth;
+  
+}
+
+::-webkit-scrollbar {
+  width: 3px; 
+}
+
+::-webkit-scrollbar-track {
+  background:  rgb(0, 0, 0);;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 119, 255);
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(21, 55, 94);
+}
